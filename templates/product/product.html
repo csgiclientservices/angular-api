@@ -1,0 +1,14 @@
+	<div class="page">
+		<h2>{{resultItem.Name}}</h2>
+		<div class="row">
+			<div class="col-md-4">
+				<p><img ng-src="{{resultItem.ImageUrl}}" alt="" width="300" class="img-responsive" /></p>
+				<div ng-repeat="plan in availablePlans" ng-show="availablePlans.length">
+					<p><a class="btn btn-default">{{plan.name}} - ${{plan.amount}}</a></p>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<p class="description">{{resultItem.Description}}</p>
+			</div>
+		</div>
+	</div>

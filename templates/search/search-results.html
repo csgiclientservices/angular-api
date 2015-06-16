@@ -1,0 +1,8 @@
+<div class="search-results">
+	<p>Search Results for <strong class="string">{{searchTerm}}</strong></p>
+	<div class="row">
+		<div class="col-sm-3" ng-repeat="result in searchResults">
+			<product-snippet title="{{result.Name}}" id="{{result.Id}}" image="{{result.ImageUrl}}"></product-snippet>
+		</div>
+	</div>
+</div>

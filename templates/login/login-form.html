@@ -1,0 +1,8 @@
+<form ng-submit="performLogin(loginField,passwordField)">
+	<legend>Login</legend>
+		<fieldset>
+			<input type="text" name="loginField" id="login" class="form-control" placeholder="Please enter your username"  ng-model="loginField" required>
+			<input type="password" name="passwordField" id="password" class="form-control" placeholder="Please enter your password"  ng-model="passField" required>
+			<input type="submit" name="submit" id="submit-login" value="Login" class="btn btn-default" />
+		</fieldset>		
+	</form>

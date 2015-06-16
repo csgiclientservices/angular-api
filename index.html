@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html ng-app="homeApp">
+<head>
+<title>Invision Home</title>
+<script src="scripts/angular-final.js"></script>
+<link rel="stylesheet" href="styles/styles.css"> 
+</head>
+
+<body ng-controller="homeScreen">
+<ul class="nav nav-tabs">
+  <li role="presentation"><a class="active" href="index.html#/">Home</a></li>
+  <li role="presentation"><a href="search.html#/">Search</a></li>
+  <li role="presentation"><a href="login.html#/">Login</a></li>
+  <li role="presentation"><a href="locker.html#/">Locker</a></li>
+</ul>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6" ng-repeat="featured in finalFeatured">
+			<a href="product.html#/{{featured.Id}}">
+				<h3>{{featured.Name}}</h3>
+				<p><img ng-src="{{featured.Image}}" class="img-responsive" style="max-height: 300px;" alt="" /></p>
+			</a>
+		</div>
+	</div>
+	<br /><br />
+	<div class="row">
+		<div class="col-sm-2" ng-repeat="bucket in finalBucket">
+			<product-snippet title="{{bucket.Name}}" id="{{bucket.Id}}" image="{{bucket.Image}}"></product-snippet>
+		</div>
+	</div>
+</div>
+</body>
+</html>

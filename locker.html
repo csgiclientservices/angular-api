@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+<html ng-app="lockerApp">
+<head>
+<title>Invision Locker</title>
+<script src="scripts/angular-final.js"></script>
+<link rel="stylesheet" href="styles/styles.css"> 
+</head>
+
+<body ng-controller="lockerItems">
+<ul class="nav nav-tabs">
+  <li role="presentation"><a href="index.html">Home</a></li>
+  <li role="presentation"><a href="search.html#/">Search</a></li>
+  <li role="presentation"><a href="login.html#/">Login</a></li>
+  <li role="presentation"><a class="active" href="locker.html#/">Locker</a></li>
+</ul>
+<div class="container">
+<div class="locker-results">
+	<div class="row">
+		<div class="col-sm-3" ng-repeat="result in lockerResults" ng-show="result.Product">
+			<product-snippet title="{{result.Product.Name}}" id="{{result.Product.Id}}" image="{{result.Product.ImageUrl}}"></product-snippet>
+		</div>
+	</div>
+	<div ng-hide="lockerResults.length">
+		<p>Sorry, there are no library items.  <a href="login.html#/">Are you logged in?</a></p>
+	</div>
+</div>	
+</div>
+</body>
+</html>
